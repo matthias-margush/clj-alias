@@ -1,0 +1,8 @@
+{:start
+ {:description "Start an nREPL."
+  :usage ["Usage: clj -A:nrepl/start"]
+  :main-opts
+  ["-m" "nrepl.cmdline" "--middleware" "[\"refactor-nrepl.middleware/wrap-refactor\",\"cider.nrepl/cider-middleware\"]"]
+  :extra-deps {nrepl {:mvn/version "0.6.0"}
+               refactor-nrepl {:mvn/version "2.4.0"}
+               cider/cider-nrepl {:mvn/version "0.21.1"}}}}
